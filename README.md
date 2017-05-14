@@ -9,12 +9,13 @@ At least this gives it the speed of executing a normal PHP file plus this is way
 - Feel free to edit the `Hello World! ` example or just write your own  
 
 ## BrainFUck Syntax
-increment the data pointer (to point to the next cell to the right).kj
-<	decrement the data pointer (to point to the next cell to the left).
-+	increment (increase by one) the byte at the data pointer.
--	decrement (decrease by one) the byte at the data pointer.
-.	output the byte at the data pointer.
-,	accept one byte of input, storing its value in the byte at the data pointer.
-[	if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching ] command.
-]	if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching [ command.
-!	if the exclaim box is checked, allows the interpreter to use all characters to the right of the ! as program input.
+- `->shiftFwd()` or `->shiftFwd(n)` decreament the data pointer (by one or n respectively) to point to the next cell to the right.
+- `->shiftBck()` or `->shiftBck(n)` 	decrement the data pointer (by one or n respectively) to point to the next cell to the left.
+- `->inc()` or - `->inc(n)` increment (increase by one or n respectively) the byte at the data pointer.
+- `->dec()` or - `->dec(n) (decrease by one or n respectively) the byte at the data pointer.
+
+- `->output()` output the byte at the data pointer. Also pass in false to mute output.
+- `->input()`	accept one byte of input, storing its value in the byte at the data pointer.
+- `->label('sample_label')`	if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching `->jmp('sample_label)` command.
+- `->jmp('sample_label')`	if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching `->label()` command.
+
