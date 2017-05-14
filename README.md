@@ -16,6 +16,6 @@ At least this gives it the speed of executing a normal PHP file plus this is way
 
 - `->output()` output the byte at the data pointer. Also pass in false to mute output.
 - `->input()`	accept one byte of input, storing its value in the byte at the data pointer.
-- `->label('sample_label')`	if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching `->jmp('sample_label)` command.
+- `->label('sample_label')`	if the byte at the data pointer is zero, then instead of moving the instruction pointer forward to the next command, jump it forward to the command after the matching `->jmp('sample_label')` command.
 - `->jmp('sample_label')`	if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward to the next command, jump it back to the command after the matching `->label()` command.
 
