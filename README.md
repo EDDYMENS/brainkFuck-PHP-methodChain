@@ -12,7 +12,7 @@ At least this gives it the speed of executing a normal PHP file plus this is way
 - `->shiftFwd()` or `->shiftFwd(n)` decreament the data pointer (by one or n respectively) to point to the next cell to the right.
 - `->shiftBck()` or `->shiftBck(n)` 	decrement the data pointer (by one or n respectively) to point to the next cell to the left.
 - `->inc()` or - `->inc(n)` increment (increase by one or n respectively) the byte at the data pointer.
-- `->dec()` or - `->dec(n) (decrease by one or n respectively) the byte at the data pointer.
+- `->dec()` or - `->dec(n)` (decrease by one or n respectively) the byte at the data pointer.
 
 - `->output()` output the byte at the data pointer. Also pass in false to mute output.
 - `->input()`	accept one byte of input, storing its value in the byte at the data pointer.
